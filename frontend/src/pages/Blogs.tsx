@@ -1,27 +1,30 @@
-import { Appbar } from "../components/Appbar"
 import { BlogCard } from "../components/BlogCard"
 import { BlogSkeleton } from "../components/BlogSkeleton";
 import { useBlogs } from "../hooks";
 import { format } from "date-fns";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export const Blogs = () => {
     const { loading, blogs } = useBlogs();
 
     if (loading) {
         return <div>
-            <Appbar /> 
+            <Header /> 
             <div  className="flex justify-center">
-                <div>
+                <div className="w-3/5 ">
+                    <BlogSkeleton />
+                    <BlogSkeleton />
                     <BlogSkeleton />
                 </div>
             </div>
         </div>
     } 
-    return <div>
-        <Appbar />
-        <div  className="flex justify-center">
-            <div>
-                
+    return <div >
+        <Header></Header>
+
+        <div  className="flex justify-center bg-slate-50 ">
+            <div className="w-3/5">
                 {blogs.map(blog => <BlogCard
                     key={blog.id}
                     id={blog.id}
@@ -33,6 +36,7 @@ export const Blogs = () => {
             
             </div>
         </div>
+        <Footer></Footer>
     </div>
 }
 

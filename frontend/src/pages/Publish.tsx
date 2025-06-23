@@ -1,8 +1,8 @@
-import { Appbar } from "../components/Appbar"
 import { BACKEND_URL } from "../config";
 import { useNavigate } from "react-router-dom";
 import { ChangeEvent, useState } from "react";
 import axios from "axios";
+import Header from "../components/Header";
 
 
 export const Publish = () => {
@@ -11,7 +11,7 @@ export const Publish = () => {
     const navigate = useNavigate();
 
     return <div>
-        <Appbar />
+        <Header />
         <div className="flex justify-center w-full pt-8"> 
             <div className="max-w-screen-lg w-full">
                 <input onChange={(e) => {

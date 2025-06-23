@@ -1,5 +1,6 @@
 {
   "name": "medium-backend",
+  "type": "module",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy --minify"
@@ -13,6 +14,8 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20250109.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
     "wrangler": "^3.101.0"
   }
 }
