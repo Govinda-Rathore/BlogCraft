@@ -42,36 +42,40 @@ git clone https://github.com/your-username/blogcraft.git
 cd blogcraft
 ```
 
+--- 
 
-##Setup Common Module
+## Setup
+### Setup Common Module
 cd common
 npm install
 npm run build
 npm link  # Optional: Link locally for development
 
-##Setup Backend
+### Setup Backend
 cd ../backend
 npm install
 
 
-##Setup Frontend
+### Setup Frontend
 cd ../frontend
 npm install
 
-##Running Locally
-###Frontend (React)
+---
+
+## Running Locally
+### Frontend (React)
 cd frontend
 npm run dev
 
-###Backend (Cloudflare Workers)
+### Backend (Cloudflare Workers)
 cd backend
 npx wrangler dev
 
 Make sure your environment variables (e.g., PostgreSQL connection string, JWT secret) are set up correctly for both frontend and backend.
 
+---
 
-
-##📈 Future Features (TODO)
+## 📈 Future Features (TODO)
 
 -🗂 Blog categories/tags
 
